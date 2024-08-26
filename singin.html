@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+        <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="loading2">
+        <div class="loading-sides2"><span>L</span></div>
+        <div class="loading-sides2"><span>O</span></div>
+        <div class="loading-sides2"><span>G</span></div>
+        <div class="loading-sides2"><span>I</span></div>
+        <div class="loading-sides2"><span>N</span></div>
+    </div>
+    <nav>
+       
+        <a href="index.html"><span class="logo">Halo Coding School</span></a>
+        <ul class="nav-item">
+            <i id="close" class="ri-close-line"></i>
+           
+            <li class="mnav"><a href="index.html">Home</a></li>
+            <li class="mnav"><a href="">Courses</a></li>
+            <li class="mnav"><a href="">Addmisions</a></li>
+           <a href="" class="mnav"><button>Sing-up</button></a>
+        </ul>
+
+    </nav>
+    <div class="shadow"></div>
+   <div class="form-container"> <div class="form">
+<h5>Login</h5>
+<input type="Email" placeholder="Email">
+<br>
+<input type="password" placeholder="password">
+<a href=""><h4>Forget password?</h4></a>
+<button type="submit">Login</button>
+<div class="already">Already have an account?<a href="">Sing-Up</a></div>
+
+    </div></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+<script>
+    var tllogin =gsap.timeline()
+
+tllogin.from(".loading-sides2 span",{
+    y:50,
+    x:-50,
+    duration:.5,
+    stagger:.30,
+    opacity:0,
+    scale:.8
+})
+tllogin.to(".loading-sides2 span",{
+    y:-50,
+    delay:.2,
+    duration:.5,
+    stagger:.20,
+    opacity:0
+})
+
+tllogin.to(".loading-sides2",{
+    transform:"translateY(-100%)",
+    stagger:.15,
+  
+    duration:.5
+})
+tllogin.from("nav",{
+    opacity:0
+})
+
+tllogin.to("#loading2",{
+    display:"none"
+})
+
+</script>
+    <script src="main.js">
+  
+    </script>
+</body>
+</html>
